@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+form{
+    background-color: rgb(207, 156, 156);
+    display: flex;
+    width: 50%;
+    margin: auto;
+    margin-top: 90px;
+    padding: 10px;
+}
+.item{
+    display: flex; 
+    padding: 10px;
+}
+input[type="text"], input[type="number"], input[type="file"], button{
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid rgb(150, 34, 132);
+}
+.save{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    
+}
+.save button{  
+    background-color: blue;
+    color:white;
+}

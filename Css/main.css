@@ -1,77 +1,119 @@
 *{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body{
-    background-color: blueviolet;
+  background-color: rgb(122, 235, 169);
 }
-.discount{
-    color: rgb(225, 44, 237);
-    background-color: rgb(195, 201, 184);
-    padding: 10px;
-}
+/* ------------nav bar style------------ */
 nav{
-    background-color: rgb(227, 176, 176);
-    display: flex;
-    justify-content: space-around;
+  background-color: rgb(227, 176, 176);
+  padding: 10px;
 }
-.nav-left{
-    padding: 20px;
-}
-.nav-center{
-    padding: 20px;
-}
-.nav-right{
-   margin: 10px;
-}
-ul{
-    display: flex;
-   justify-content: space-between;
+ul {
+  display: flex;
+  justify-content:space-evenly;
 }
 li{
-    display: inline;
-    padding-left: 10px;
-    padding-right: 10px;
+  list-style: none;
 }
-.login{
-    background-color: rgb(29, 56, 126);
+li:hover{
+  transition: all 1ms;
+  border: 5px solid pink;
+}
+a{
+  text-transform: uppercase;
+  text-decoration:none;
+  color:black;
+}
+.nav-center{
+  display: flex;
+  background-color: rgb(164, 147, 147);
+  justify-content: center;
+}
+.nav-center button ,input[type="search"]{
+  padding: 5px;
+  border: 5px solid pink;
+}
+input[type="search"]{
+  width: 30%;
+  
 }
 .detail{
     display: flex;
     padding: 10px;
-    background-color: rgb(199, 86, 86);
+    border-top: 3px solid rgb(235, 201, 207);
     justify-content:space-around;
+    
 }
 .make-up{
-    background-color: rgb(241, 95, 207);
+    background-color: rgb(245, 60, 137);
     padding: 5px;
-    border-radius: 10px;
     border: none;
-    width: 10%;
+    width: 15%;
     cursor: pointer;
+    border-radius: 5px;
+    border: 3px solid rgb(214, 148, 159);
 }
+.make-up:hover{
+  background-color: #fff;
+}
+/* ------------card style------------ */
 .card{
     display: flex;
-    padding: 100px;
-    background-color: rgb(198, 47, 188);
-    padding: 50px;
+    background-color: rgb(220, 43, 117);
+    padding: 30px;
     justify-content: space-around;
 }
 .item1{
-    padding: 5px;
-    background-color: #fff;
+    background-color:white;
+    width: 21%;
+    height: 55vh;
     border-radius: 10px;
-    width: 10%;
-    height: 30vh;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     cursor: pointer;
+    border:5px solid rgb(227, 146, 233);
 }
-  .footer {
+.item1:hover{
+ border:5px solid pink;
+}
+.btn{
+  display: flex;
+  justify-content: flex-end;
+  padding:5px;
+}
+.btn button{
+  background-color: rgb(193, 141, 141);
+  padding: 5px;
+  border: 2px solid rgb(235, 70, 207);
+}
+.btn button:hover{
+  background-color: rgb(17, 124, 112);
+}
+img{
+  padding: 10px;
+}
+p{
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+}
+p:hover{
+  color: pink;
+}
+.star{
+  color: orange;
+  display: flex;
+  justify-content: center;
+}
+
+/* ------------footer style------------ */
+.footer {
     padding: 40px 0;
     background-color: #cf6ec5;
   }
   
-  .footer .social {
+.footer .social {
     text-align: center;
     padding-bottom: 25px;
     color: #4b4c4d;
@@ -123,4 +165,5 @@ li{
     display: flex;
     justify-content:space-evenly;
 }
+
   
