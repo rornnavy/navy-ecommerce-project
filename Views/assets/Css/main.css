@@ -1,9 +1,10 @@
 *{
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
 }
 body{
-  background-color: rgb(122, 235, 169);
+  background-color: rgb(233, 174, 229);
 }
 /* ------------nav bar style------------ */
 nav{
@@ -28,7 +29,7 @@ a{
 }
 .nav-center{
   display: flex;
-  background-color: rgb(164, 147, 147);
+  background-color: rgb(236, 170, 222);
   justify-content: center;
 }
 .nav-center button ,input[type="search"]{
@@ -36,8 +37,7 @@ a{
   border: 5px solid pink;
 }
 input[type="search"]{
-  width: 30%;
-  
+  width: 30%
 }
 .detail{
     display: flex;
@@ -61,7 +61,7 @@ input[type="search"]{
 /* ------------card style------------ */
 .card{
     display: flex;
-    background-color: rgb(220, 43, 117);
+    background-color: rgb(222, 155, 183);
     padding: 30px;
     justify-content: space-around;
 }
@@ -110,7 +110,7 @@ p:hover{
 /* ------------footer style------------ */
 .footer {
     padding: 40px 0;
-    background-color: #cf6ec5;
+    background-color: #d8b9d5;
   }
   
 .footer .social {

@@ -1,8 +1,134 @@
 /* .container{
-    
+    display: flex;
+    justify-content: center;
 } */
+/* body{
+    background-image: url(../assets/Image/bg1.avif);
+} */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  body{
+    background-color: rgb(237, 232, 237);
+  }
+  /* ------------nav bar style------------ */
+  nav{
+    background-color: rgb(227, 176, 176);
+    padding: 10px;
+  }
+  ul {
+    display: flex;
+    justify-content:space-evenly;
+  }
+  li{
+    list-style: none;
+  }
+  li:hover{
+    transition: all 1ms;
+    border: 5px solid pink;
+  }
+  a{
+    text-transform: uppercase;
+    text-decoration:none;
+    color:black;
+  }
+  .nav-center{
+    display: flex;
+    background-color: rgb(236, 170, 222);
+    justify-content: center;
+  }
+  .nav-center button ,input[type="search"]{
+    padding: 5px;
+    border: 5px solid pink;
+  }
+  input[type="search"]{
+    width: 30%;
+    
+  }
+  .detail{
+      display: flex;
+      padding: 10px;
+      border-top: 3px solid rgb(235, 201, 207);
+      justify-content:space-around;
+      
+  }
+  .make-up{
+      background-color: rgb(245, 60, 137);
+      padding: 5px;
+      border: none;
+      width: 15%;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 3px solid rgb(214, 148, 159);
+  }
+  .make-up:hover{
+    background-color: #fff;
+  }
 .heading{
     display: flex;
     justify-content: center;
-    color: blue;
+    color: rgb(242, 130, 216);
+    padding: 30px;
+}
+.group{
+    display: flex;
+    justify-content: center;
+}
+.under{
+    background-color: rgb(161, 136, 153);
+    padding: 90px;
+    width: 50%;
+    border-radius:10px;
+    border: 5px solid rgb(251, 152, 229);
+}
+.on{
+    background-color: rgb(228, 162, 212);
+    padding: 90px;
+    width: 50%;
+    border-radius:10px;
+    border: 5px solid rgb(225, 142, 202);
+}
+.item1{
+    background-color:rgb(224, 232, 206);
+    width: 25%;
+    height: 85vh;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    cursor: pointer;
+    border:5px solid rgb(227, 146, 233);
+}
+.item1:hover{
+ border:5px solid pink;
+}
+.btn{
+  display: flex;
+  justify-content: flex-end;
+  padding:5px;
+}
+.btn button{
+  background-color: rgb(193, 141, 141);
+  padding: 5px;
+  border: 2px solid rgb(235, 70, 207);
+}
+.btn button:hover{
+  background-color: rgb(17, 124, 112);
+}
+img{
+  padding: 10px;
+}
+p{
+  display: flex;
+  justify-content:flex-start;
+  padding: 20px;
+}
+p:hover{
+  color: pink;
+}
+.star{
+  color: orange;
+  display: flex;
+  justify-content:flex-start;
+  padding: 20px;
 }
