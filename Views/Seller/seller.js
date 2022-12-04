@@ -1,8 +1,6 @@
 // DATA ------------
 let productList = JSON.parse(localStorage.getItem('product-name')) ?? [];
 
-// VARIABLES -------
-
 function addProductToLocalStorage(key, value) {
     localStorage.setItem(key, value);
 }
@@ -14,7 +12,6 @@ function getProductFromLocalStorage(key) {
 function createNewRecord(name, description, price,branch,image, index) {
     let tr = document.createElement('tr');
     tr.dataset.index = index;
-    tr.className ="tr-record"
     const tdOne = document.createElement('td');
     const tdTwo = document.createElement('td');
     const tdThree = document.createElement('td');
@@ -41,7 +38,7 @@ function createNewRecord(name, description, price,branch,image, index) {
 
     edit.addEventListener("click",(e) => {
         let index = e.target.dataset.index;
-        dom_questions_dialog.style.display = "block";
+        dom_product_dialog.style.display = "block";
         
         productList.splice(index, 1);
     })
@@ -119,46 +116,38 @@ const tableData = document.querySelector('.table-data');
 
 btn.addEventListener('click', (e) => {
     e.preventDefault();
-
-    // if (productName.value === "" || productDescription.value === "" || productPrice.value ==="" ||productBranch.value === "" || productImage.value === "") {
-    //     return;
-    // }
-   
-    let productObject = {name: productName.value, description: productDescription.value, price: productPrice.value, branch:productBranch.value, image:productImage.value}
     
-    productList.push(productObject);
+    dom_product_dialog.style.display = "block";
+     
     productName.value = "";
     productDescription.value = "";
     productBranch.value = "";
     productPrice.value = "";
-    productImage.value = "";
-
-    addProductToLocalStorage('product-name', JSON.stringify(productList));
+    productImage.value = "";   
     displayProduct();
-    
 })
-
-function delete_btn() {
-    let tr = document.querySelectorAll("tr");
-    addProductToLocalStorage()
-  }
 
 document.addEventListener('DOMContentLoaded', () => { displayProduct() })
 
 // ----------------------dialog--------------------------------
 
-const dom_questions_dialog = document.querySelector("#questions-dialog");
+const dom_product_dialog = document.querySelector("#product-dialog");
 let cancel_btn = document.querySelector("#cancel");
 let create_btn = document.querySelector("#create");
 
 cancel_btn.addEventListener("click",(e) => {
-    dom_questions_dialog.style.display = "none";
+    dom_product_dialog.style.display = "none";
 })
 
 create_btn.addEventListener("click",(e) => {
+    dom_product_dialog.style.display = "none";
     let productObject = {name: productName.value, description: productDescription.value, price: productPrice.value, branch:productBranch.value, image:productImage.value};
     productList.push(productObject);
-    dom_questions_dialog.style.display = "none";
+    if (productObject.name == "" || productObject.description == "" || productObject.price == ""|| productObject.branch == "" ||productObject.image == "" ){
+        alert("please fill all inputs")
+        dom_product_dialog.style.display = "block";
+        return
+    }
     addProductToLocalStorage('product-name', JSON.stringify(productList));
     displayProduct();
 })

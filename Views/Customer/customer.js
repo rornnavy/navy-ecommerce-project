@@ -1,38 +1,39 @@
 
-function createCard(name, price, description,branch,image) {
+function createCard(name, price, description,branch,image,moredetail) {
+
+    
     const card = document.createElement('div');
-    card.classList.add('card');
+    card.className = 'card';
 
-    const nameElement = document.createElement('div');
-    nameElement.classList.add('title');
-    nameElement.textContent = name;
+    const nameElement = document.createElement('p');
+    nameElement.classList.add('textname');
+    nameElement.textContent = "Name :" + name;
 
-    const cardBody = document.createElement('div');
-    cardBody.classList.add('card-body');
+    const priceElement =document.createElement('p');
+    priceElement.classList.add('text');
+    priceElement.textContent  ="Price : "+ price + " $" 
 
-    const priceElement =document.createElement('div');
-    priceElement.classList.add('price');
-    priceElement.textContent  = "$" + price
+    const descriptionElement = document.createElement('p');
+    descriptionElement.classList.add('text');
+    descriptionElement.textContent = "Decription : "+ description;
 
-    const descriptionElement = document.createElement('div');
-    descriptionElement.classList.add('description');
-    descriptionElement.textContent = description;
-
-    const branchElement = document.createElement('div');
-    branchElement.classList.add('branch');
-    branchElement.textContent = branch;
+    const branchElement = document.createElement('p');
+    branchElement.classList.add('text');
+    branchElement.textContent = "Brand :" + branch;
 
     const imageElement = document.createElement('img');
+    imageElement.className = 'image';
     imageElement.src  = image;
+    imageElement.style.width = '100%';
 
-    cardBody.appendChild(priceElement);
-    cardBody.appendChild(descriptionElement);
-    cardBody.appendChild(branchElement);
 
     card.appendChild(imageElement)
     card.appendChild(nameElement);
-    card.appendChild(cardBody);
- 
+    card.appendChild(priceElement);
+    card.appendChild(descriptionElement);
+    card.appendChild(branchElement);
+    container.appendChild(card);
+
     return card;
 }
 
@@ -46,3 +47,24 @@ function displayProduct() {
 
 const container = document.querySelector('#container');
 document.addEventListener('DOMContentLoaded', () => { displayProduct(); });
+
+// ----------------Search product---------------
+
+let search_product = document.querySelector('#search-product');
+let listName = document.querySelectorAll('.card')
+
+function search() {
+    let containers = document.querySelector(".container").children
+    let user_input = search_product.value.toLowerCase()
+    console.log(user_input)
+    for (let card of containers){
+        let listName =card.children[1].textContent
+        if (listName.toLowerCase().indexOf(user_input)>-1){
+            card.style.display ="block"
+        }
+        else {
+            card.style.display ="none"
+        }
+    }
+}
+

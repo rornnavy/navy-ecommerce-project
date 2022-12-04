@@ -8,60 +8,39 @@
     <link rel="stylesheet" href="seller.css">
 </head>
 <body>
-    <div class="container">
-        <form action="#">
-            <div class="information">
-                <h1>Your Product</h1>
-                <div class="item">
-                    <p>Name: </p>
-                    <input type="text" id ="product-name" placeholder="Your name...">
-                </div>
-                <div class="item">
-                    <p>Description: </p>
-                    <input type="text" id ="product-description" placeholder="Your Description...">
-                </div>
-                <div class="item">
-                    <p>Price : </p>
-                    <input type="number" min="0"  id ="product-price" placeholder="Your Price..">
-                </div>
-                <div class="item">
-                    <p>Branch : </p>
-                    <input type="text" id ="product-branch" placeholder="Your branch...">
-                </div>
-                <div class="item">
-                    <p>Image: </p>
-                    <input type="url"  id ="product-img" placeholder="Your Image..">
-                </div>
-            </div>
-            <div class="img">
-                <img src="../assets/Image/4.avif" alt="" width="80%">
-            </div>
-            
-        </form>
-        <div class="table-data"></div>
+    <nav>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="../../index.html">BEAUTY CARE</a></li>
+                <li><a href="../../index.html">product</a></li>
+                <li><a href="seller.html">Seller</a></li>
+                <li><a href="../Customer/customer.html">Customer</a></li>
+            </ul> 
+        </nav>
+    </nav>
+    <div class="add">
+        <button>ADD PRODUCT</button>
     </div>
-    <div class="save">
-        <button>SAVE INFORMATIONS</button>
-    </div>
-    <div id="questions-dialog" style="display: none">
+    <div class="table-contai"></div>
+    <div class="table-data"></div>
+    <div id="product-dialog" style="display: none">
         <dialog open>
-          <header>Update your product</header>
-  
-          <section>
-            <label>Product Name</label>
-            <input type="text" id ="get-name" placeholder="Your name...">
-            <label>About Your product</label>
-            <input type="text" id ="get-description" placeholder="Your Description...">
-            <input type="number" id="get-price" min="0"  id ="product-price" placeholder="Your Price..">
-            <input type="text" id ="get-brand" placeholder="Your branch...">
-            <input type="url"  id ="get-img" placeholder="Your Image..">
-          </section>
-          <menu>
-            <button id="cancel">Cancel</button>
-            <button id="create">Create</button>
-          </menu>
+            <header>Update your product</header>
+            <section>
+                <label>Product Name</label>
+                <input type="text" id ="get-name" placeholder="Your name...">
+                <label>About Your product</label>
+                <input type="text" id ="get-description" placeholder="Your Description...">
+                <input type="number" id="get-price" min="0"  id ="product-price" placeholder="Your Price..">
+                <input type="text" id ="get-brand" placeholder="Your branch...">
+                <input type="url"  id ="get-img" placeholder="Your Image..">
+            </section>
+            <menu>
+                <button id="cancel">Cancel</button>
+                <button id="create">Create</button>
+            </menu>
         </dialog>
-      </div>
+    </div>
     <script src="seller.js"></script>
 </body>
 </html>

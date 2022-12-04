@@ -9,18 +9,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="../../index.html">BEAUTY CARE</a></li>
+            <li><a href="../../index.html">product</a></li>
+            <li><a href="../Seller/seller.html">Seller</a></li>
+            <li><a href="customer.html">Customer</a></li>
+        </ul> 
+    </nav>
     <div class="bg">
         <img src="../assets/Image/bg.avif" alt="" width="100%">
     </div>
-    <nav class="nav-center">
-        <input type="search" placeholder="Search Product">
+    <nav class="search">
+        <input type="search" id="search-product" placeholder="Search Product" onkeyup="search()">
         <button>
             <i class="fa fa-search" aria-hidden="true"></i>
         </button>
     </nav>
-    <div class="container  mt-5">
-        <h1>CUSTOMER</h1>
-    </div>
     <div class="container" id="container"></div>
     <script src="customer.js"></script>
 </body>
